@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artisanal Coffee & Gear Shop | COFFEE SHOP Roasters</title>
+  <meta name="description" content="Shop freshly roasted whole bean and ground coffee, direct trade origins, signature espresso blends, and premium brewing gear shipped directly to your door." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Product Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "position": 1,
+        "name": "Ethiopian Yirgacheffe",
+        "image": "assets/images/coffee_bag.jpg",
+        "description": "Floral jasmine and Meyer lemon notes. Light roast single origin.",
+        "offers": {
+          "@type": "Offer",
+          "price": "18.50",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Product",
+        "position": 2,
+        "name": "Colombian Huila Reserva",
+        "image": "assets/images/coffee_bag.jpg",
+        "description": "Sweet red apple, caramel and toasted almond. Medium roast.",
+        "offers": {
+          "@type": "Offer",
+          "price": "17.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <!-- Heavy repeating coffee bean border at the top -->
+    <div class="header-bean-strip top-strip" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html#home" class="brand-wrapper" aria-label="Coffee Shop Home">
+          <div class="logo-icon-box">
+            <svg class="cup-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g class="steam-group" stroke="#e6d7be" stroke-width="3" stroke-linecap="round">
+                <path d="M38 28 C34 22 42 16 38 10" />
+                <path d="M50 26 C46 20 54 14 50 8" />
+                <path d="M62 28 C58 22 66 16 62 10" />
+              </g>
+              <path d="M26 38 H74 V56 C74 69 63 76 50 76 C37 76 26 69 26 56 Z" fill="#ffffff" />
+              <ellipse cx="50" cy="38" rx="24" ry="4" fill="#f5ece1" />
+              <ellipse cx="50" cy="40" rx="21" ry="3" fill="#2d190f" />
+              <path d="M73 44 C84 44 86 60 72 63" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" />
+              <ellipse cx="50" cy="79" rx="36" ry="6" fill="#f5ece1" />
+              <ellipse cx="50" cy="78" rx="32" ry="4" fill="#ffffff" />
+              <g transform="translate(14, 76)">
+                <ellipse cx="6" cy="4" rx="6" ry="4" transform="rotate(-25 6 4)" fill="#c88a4b" />
+                <path d="M3 2 C5 4 7 4 9 6" stroke="#170d08" stroke-width="1.2" stroke-linecap="round" />
+              </g>
+              <g transform="translate(76, 75)">
+                <ellipse cx="6" cy="4" rx="6" ry="4" transform="rotate(20 6 4)" fill="#8c582c" />
+                <path d="M3 2 C5 4 7 4 9 6" stroke="#170d08" stroke-width="1.2" stroke-linecap="round" />
+              </g>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1 class="site-title">COFFEE SHOP</h1>
+            <p class="site-tagline">ENJOY THE SMELL OF COFFEE</p>
+          </div>
+        </a>
+
+        <div class="header-actions">
+          <button id="cartToggleBtn" class="cart-toggle-btn" aria-label="View Shopping Cart">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            <span>Cart</span>
+            <span id="cartBadgeCount" class="cart-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Heavy repeating coffee bean border at the bottom -->
+    <div class="header-bean-strip bottom-strip" aria-hidden="true"></div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation menu">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+
+      <ul id="navList" class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+        <li class="nav-item"><a href="shop.html" class="nav-link active">SHOP</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="classic-content-section" role="main">
+    <div class="container">
+      <div class="section-title-wrap">
+        <p class="section-subtitle">Roasted Fresh Daily</p>
+        <h2 class="section-title">Artisanal Coffee & Gear Store</h2>
+        <p style="color: var(--cream-200); max-width: 620px; margin: 0.75rem auto 0;">All whole bean packages are heat-sealed with a one-way degassing valve and stamped with the exact roast date.</p>
+      </div>
+
+      <!-- Products Catalog Grid -->
+      <div class="products-grid">
+        
+        <!-- Product 1: Ethiopian Yirgacheffe -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge">Light Roast</span>
+            <img src="assets/images/coffee_bag.jpg" alt="Bag of Ethiopian Yirgacheffe coffee beans" width="300" height="240" loading="eager" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Ethiopia • Washed Heirloom</span>
+            <h3 class="product-title">Ethiopian Yirgacheffe</h3>
+            <p class="product-desc">Delicate jasmine florals, bergamot black tea, and crisp citrus. Elegant and aromatic.</p>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="grind-ethiopia" style="font-size: 0.78rem; text-transform: uppercase; color: var(--cream-300); font-weight: 600; display: block; margin-bottom: 0.25rem;">Grind Type:</label>
+              <select id="grind-ethiopia" class="form-control grind-select" style="padding: 0.4rem 0.75rem; font-size: 0.88rem;">
+                <option value="Whole Bean">Whole Bean (Recommended)</option>
+                <option value="Coarse (French Press / Cold Brew)">Coarse (French Press / Cold Brew)</option>
+                <option value="Medium (Drip / Chemex)">Medium (Drip / Chemex)</option>
+                <option value="Fine (Espresso / Moka)">Fine (Espresso / Moka)</option>
+              </select>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="product-price">$18.50</span>
+              <button class="btn-add-cart" data-add-to-cart="ethiopia-yirgacheffe" aria-label="Add Ethiopian Yirgacheffe to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2: Colombian Huila Reserva -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge">Medium Roast</span>
+            <img src="assets/images/coffee_bag.jpg" alt="Bag of Colombian Huila Reserva coffee beans" width="300" height="240" loading="eager" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Colombia • Huila Reserva</span>
+            <h3 class="product-title">Colombian Huila Reserva</h3>
+            <p class="product-desc">Rich brown sugar syrup, sweet red apple acidity, and a creamy toasted hazelnut finish.</p>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="grind-colombia" style="font-size: 0.78rem; text-transform: uppercase; color: var(--cream-300); font-weight: 600; display: block; margin-bottom: 0.25rem;">Grind Type:</label>
+              <select id="grind-colombia" class="form-control grind-select" style="padding: 0.4rem 0.75rem; font-size: 0.88rem;">
+                <option value="Whole Bean">Whole Bean (Recommended)</option>
+                <option value="Coarse (French Press / Cold Brew)">Coarse (French Press / Cold Brew)</option>
+                <option value="Medium (Drip / Chemex)">Medium (Drip / Chemex)</option>
+                <option value="Fine (Espresso / Moka)">Fine (Espresso / Moka)</option>
+              </select>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="product-price">$17.00</span>
+              <button class="btn-add-cart" data-add-to-cart="colombia-huila" aria-label="Add Colombian Huila to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3: Sumatra Mandheling Dark -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge">Dark Roast</span>
+            <img src="assets/images/coffee_bag.jpg" alt="Bag of Sumatra Mandheling Dark roast beans" width="300" height="240" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Indonesia • Wet-Hulled</span>
+            <h3 class="product-title">Sumatra Mandheling Dark</h3>
+            <p class="product-desc">Full-bodied syrupy intensity, dark baker's cocoa, fragrant cedar wood, and subtle sweet spices.</p>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="grind-sumatra" style="font-size: 0.78rem; text-transform: uppercase; color: var(--cream-300); font-weight: 600; display: block; margin-bottom: 0.25rem;">Grind Type:</label>
+              <select id="grind-sumatra" class="form-control grind-select" style="padding: 0.4rem 0.75rem; font-size: 0.88rem;">
+                <option value="Whole Bean">Whole Bean (Recommended)</option>
+                <option value="Coarse (French Press / Cold Brew)">Coarse (French Press / Cold Brew)</option>
+                <option value="Medium (Drip / Chemex)">Medium (Drip / Chemex)</option>
+                <option value="Fine (Espresso / Moka)">Fine (Espresso / Moka)</option>
+              </select>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="product-price">$19.00</span>
+              <button class="btn-add-cart" data-add-to-cart="sumatra-mandheling" aria-label="Add Sumatra Mandheling to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4: Signature House Espresso Blend -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge">Medium-Dark</span>
+            <img src="assets/images/coffee_bag.jpg" alt="Vintage Roastery Espresso Blend coffee bag" width="300" height="240" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Signature Blend • Brazil & Guatemala</span>
+            <h3 class="product-title">Vintage Espresso Blend</h3>
+            <p class="product-desc">Engineered for thick, golden crema. Notes of dark chocolate fudge, toasted almond, and molasses.</p>
+            
+            <div style="margin-bottom: 1rem;">
+              <label for="grind-espresso" style="font-size: 0.78rem; text-transform: uppercase; color: var(--cream-300); font-weight: 600; display: block; margin-bottom: 0.25rem;">Grind Type:</label>
+              <select id="grind-espresso" class="form-control grind-select" style="padding: 0.4rem 0.75rem; font-size: 0.88rem;">
+                <option value="Whole Bean">Whole Bean (Recommended)</option>
+                <option value="Fine (Espresso / Moka)">Fine (Espresso / Moka)</option>
+                <option value="Medium (Drip / Chemex)">Medium (Drip / Chemex)</option>
+              </select>
+            </div>
+
+            <div class="product-meta-row">
+              <span class="product-price">$16.50</span>
+              <button class="btn-add-cart" data-add-to-cart="house-espresso-blend" aria-label="Add Espresso Blend to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5: Copper French Press -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge" style="background:#553119;">Gear</span>
+            <img src="assets/images/latte_art.jpg" alt="Artisan Copper French Press" width="300" height="240" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Brewing Gear • 8-Cup Capacity</span>
+            <h3 class="product-title">Artisan Copper French Press</h3>
+            <p class="product-desc">Heat-resistant borosilicate glass with electroplated brushed copper chassis and ultra-fine mesh filter.</p>
+            <div class="product-meta-row">
+              <span class="product-price">$42.00</span>
+              <button class="btn-add-cart" data-add-to-cart="french-press-artisan" aria-label="Add French Press to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6: Heritage Diner Mug -->
+        <article class="product-card">
+          <div class="product-img-wrap">
+            <span class="roast-badge" style="background:#3b2315;">Merchandise</span>
+            <img src="assets/images/hero.jpg" alt="Heavy ceramic vintage diner mug" width="300" height="240" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <span class="product-origin">Merchandise • 12oz Ceramic Stoneware</span>
+            <h3 class="product-title">Heritage Diner Mug</h3>
+            <p class="product-desc">Thick-walled classic ceramic mug that keeps coffee piping hot. Featuring our embossed roastery crest.</p>
+            <div class="product-meta-row">
+              <span class="product-price">$14.00</span>
+              <button class="btn-add-cart" data-add-to-cart="vintage-diner-mug" aria-label="Add Diner Mug to cart">
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Coffee Subscription Callout -->
+      <div class="content-main-panel" style="margin-top: 4rem; text-align: center; border: 2px dashed var(--amber-gold);">
+        <span class="hero-pill">Save 15% On Every Delivery</span>
+        <h3 style="font-family: var(--font-heading); color: var(--cream-50); font-size: 2rem; margin: 0.5rem 0 1rem;">
+          Join the Roaster’s Circle Subscription
+        </h3>
+        <p style="color: var(--cream-200); max-width: 620px; margin: 0 auto 1.75rem;">
+          Select your cadence (weekly, bi-weekly, or monthly). Never run out of freshly roasted beans again. Pause, swap origins, or cancel at any time with one click.
+        </p>
+        <button class="btn-primary" onclick="showToast('Subscription builder launched! Select your favorites above.')">
+          Subscribe & Save 15%
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="terms.html">Copyright &amp; Terms</a></li>
+      </ul>
+      <p class="footer-copy">
+        &copy; 2026 Coffee Shop Inc. All Rights Reserved. Crafted with dedication to sustainable agriculture and the art of traditional drum roasting.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawerBackdrop" class="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="drawer-header">
+      <h2 class="drawer-title">Your Coffee Order</h2>
+      <button id="closeCartBtn" class="btn-close-drawer">&times;</button>
+    </div>
+    <div id="cartItemsList" class="cart-items-list"></div>
+    <div class="drawer-footer">
+      <div class="subtotal-row">
+        <span>Order Subtotal:</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--cream-300); margin-bottom: 1rem;">Free domestic shipping on orders over $45. Freshness guaranteed.</p>
+      <button id="checkoutBtn" class="btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

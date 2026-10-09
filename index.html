@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COFFEE SHOP | Enjoy The Smell Of Coffee - Artisanal Roasters</title>
+  <meta name="description" content="Welcome to Coffee Shop. Enjoy the smell of freshly roasted artisanal single-origin coffee, handcrafted espresso blends, and bakery fare in our vintage roastery." />
+  <meta name="keywords" content="coffee shop, artisanal coffee, single origin beans, espresso, roastery, cafe, direct trade" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="COFFEE SHOP | Enjoy The Smell Of Coffee" />
+  <meta property="og:description" content="Enjoy the smell of freshly roasted specialty coffee beans and handcrafted cafe drinks in our vintage roastery." />
+  <meta property="og:image" content="assets/images/hero.jpg" />
+
+  <!-- Preload Critical Media for LCP -->
+  <link rel="preload" as="image" href="assets/images/hero.jpg" />
+  <link rel="preload" as="image" href="assets/images/bean_border.jpg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- LocalBusiness Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Vintage Roastery Coffee Shop",
+    "image": "assets/images/hero.jpg",
+    "telephone": "+1-555-234-7689",
+    "email": "hello@vintagecoffeeshop.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "124 Roastery Way, Historic District",
+      "addressLocality": "Portland",
+      "addressRegion": "OR",
+      "postalCode": "97201",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "06:30",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "07:30",
+        "closes": "21:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#about" class="skip-link">Skip to main content</a>
+
+  <!-- Floating Quick-Return Button to Jump Back to Home Page Top -->
+  <a href="#home" id="floatingBackToHome" class="floating-back-to-top" aria-label="Return to Home Top">
+    ▲ Back to Home
+  </a>
+
+  <!-- ==========================================================================
+       1. HEADER SECTION (Heavy Repeating Bean Borders & Vintage Typography)
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <!-- Heavy repeating coffee bean border at the top -->
+    <div class="header-bean-strip top-strip" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo / Imagery (Left) -->
+        <a href="index.html" class="brand-wrapper" aria-label="Coffee Shop Home">
+          <div class="logo-icon-box">
+            <!-- Stylized White Coffee Cup on Saucer with Coffee Beans & Animated Steam -->
+            <svg class="cup-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Animated Steam -->
+              <g class="steam-group" stroke="#e6d7be" stroke-width="3" stroke-linecap="round">
+                <path d="M38 28 C34 22 42 16 38 10" />
+                <path d="M50 26 C46 20 54 14 50 8" />
+                <path d="M62 28 C58 22 66 16 62 10" />
+              </g>
+              <!-- Cup Body -->
+              <path d="M26 38 H74 V56 C74 69 63 76 50 76 C37 76 26 69 26 56 Z" fill="#ffffff" />
+              <!-- Cup Rim highlight -->
+              <ellipse cx="50" cy="38" rx="24" ry="4" fill="#f5ece1" />
+              <!-- Coffee liquid inside -->
+              <ellipse cx="50" cy="40" rx="21" ry="3" fill="#2d190f" />
+              <!-- Cup Handle -->
+              <path d="M73 44 C84 44 86 60 72 63" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" />
+              <!-- Saucer Base -->
+              <ellipse cx="50" cy="79" rx="36" ry="6" fill="#f5ece1" />
+              <ellipse cx="50" cy="78" rx="32" ry="4" fill="#ffffff" />
+              <!-- Two Coffee Beans Beside Saucer -->
+              <g transform="translate(14, 76)">
+                <ellipse cx="6" cy="4" rx="6" ry="4" transform="rotate(-25 6 4)" fill="#c88a4b" />
+                <path d="M3 2 C5 4 7 4 9 6" stroke="#170d08" stroke-width="1.2" stroke-linecap="round" />
+              </g>
+              <g transform="translate(76, 75)">
+                <ellipse cx="6" cy="4" rx="6" ry="4" transform="rotate(20 6 4)" fill="#8c582c" />
+                <path d="M3 2 C5 4 7 4 9 6" stroke="#170d08" stroke-width="1.2" stroke-linecap="round" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Typography (Right / Center) -->
+          <div class="brand-text">
+            <h1 class="site-title">COFFEE SHOP</h1>
+            <p class="site-tagline">ENJOY THE SMELL OF COFFEE</p>
+          </div>
+        </a>
+
+        <!-- Quick Cart Trigger in Header -->
+        <div class="header-actions">
+          <button id="cartToggleBtn" class="cart-toggle-btn" aria-label="View Shopping Cart">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span>Cart</span>
+            <span id="cartBadgeCount" class="cart-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heavy repeating coffee bean border at the bottom -->
+    <div class="header-bean-strip bottom-strip" aria-hidden="true"></div>
+  </header>
+
+  <!-- ==========================================================================
+       2. NAVIGATION BAR (Tactile 3D Beveled Beige Buttons, Multi-Page Links)
+       ========================================================================== -->
+  <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <button id="mobileNavToggle" class="mobile-nav-toggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation menu">
+        Menu
+      </button>
+
+      <ul id="navList" class="nav-list">
+        <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+        <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+        <li class="nav-item"><a href="shop.html" class="nav-link">SHOP</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO BANNER (Welcoming Aroma & Roastery Showcase)
+       ========================================================================== -->
+  <section class="hero-banner">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span aria-hidden="true">☕</span> Slow Roasted in Historic Cast Iron Drums
+          </div>
+          <h2 class="hero-heading">Where Rich Aroma Meets <span>Timeless Craft.</span></h2>
+          <p class="hero-desc">
+            Step through our doors and immerse yourself in the rich perfume of freshly cracked beans, velvety micro-foam, and authentic warmth. Small-batch, ethically sourced, and roasted daily to perfection.
+          </p>
+          <div class="hero-cta-group">
+            <a href="shop.html" class="btn-primary">
+              <span>Explore Menu &amp; Beans</span>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="about.html" class="btn-secondary">Our Heritage Story</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-image-frame">
+            <img src="assets/images/hero.jpg" alt="White ceramic cup with rich espresso and roasted coffee beans on a rustic wooden roastery counter" width="600" height="380" loading="eager" />
+            <div class="hero-badge-overlay">
+              <span style="font-size: 1.8rem;">🌿</span>
+              <div>
+                <h4 style="font-family: var(--font-heading); color: var(--text-gold); font-size: 1rem;">100% Direct Trade</h4>
+                <p style="font-size: 0.8rem; color: var(--text-cream-muted);">Single-origin fair-trade harvests</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1: THE TWO-COLUMN CLASSIC VINTAGE ROASTERY (From Mockup)
+       ========================================================================== -->
+  <section class="classic-content-section" aria-label="Daily roast profile and classic roastery notes">
+    <div class="container">
+      <div class="classic-grid">
+        
+        <!-- Left Column (Sidebar / Aside) -->
+        <aside class="content-aside" aria-label="Roaster notes and daily specials">
+          <h2 class="aside-heading">DAILY ROAST &amp; BREW BAR</h2>
+
+          <div class="aside-block">
+            <h3>Morning Drum Batch</h3>
+            <p>Our daily cupping cycle starts at 5:30 AM. Today’s featured profile is a bright honey-processed Ethiopian heirloom batch with sweet notes of bergamot, apricot jam, and jasmine blossom.</p>
+          </div>
+
+          <div class="aside-block">
+            <h3>Origin Spotlight</h3>
+            <ul class="aside-list">
+              <li><span>Elevation:</span> <span class="val">1,950 - 2,200m</span></li>
+              <li><span>Varietal:</span> <span class="val">Heirloom Arabica</span></li>
+              <li><span>Process:</span> <span class="val">Washed &amp; Sun-Dried</span></li>
+              <li><span>Roast Level:</span> <span class="val">Light-Medium</span></li>
+            </ul>
+          </div>
+
+          <div class="aside-block">
+            <h3>Barista Recommendation</h3>
+            <p>Pair with our morning sourdough cardamoms or enjoy as a delicate V60 pour-over to capture every subtle floral undertone.</p>
+          </div>
+
+          <div class="aside-block" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(220, 163, 90, 0.25);">
+            <div id="liveHoursStatus" class="hours-status-badge status-open">
+              <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#4caf50;"></span>
+              Checking Cafe Hours...
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-cream-muted); margin-top: 0.5rem;">Walk-ins welcome. Antique timber seating and quiet reading nooks available.</p>
+          </div>
+        </aside>
+
+        <!-- Right Column (Wider Primary Content Panel) -->
+        <section class="content-main-panel" aria-label="Coffee heritage and sensory experience">
+          <h2 class="main-panel-heading">THE ART OF THE CAST-IRON ROAST</h2>
+
+          <p class="lead-paragraph">
+            Coffee is not merely a morning beverage; it is a timeless ritual steeped in patience, community, and sensory delight. The irresistible fragrance of toasted caramel, dark cocoa, and warm spices brings travelers and neighbors together.
+          </p>
+
+          <p class="body-paragraph">
+            At our roastery, we honor classic vintage roasting methods passed down through generations. Rather than leaning on cold digital algorithms, our master roasters engage all five senses: tracking the subtle shift in crackling frequencies inside the drum, sampling the deepening aroma, and inspecting the color hue by hand under daylight lamps.
+          </p>
+
+          <p class="body-paragraph">
+            We partner intimately with multigenerational family estates across East Africa, Central America, and the Indonesian archipelago. Every bean is harvested at peak ripeness, dried on raised African beds, and shipped directly in hermetic GrainPro bags to ensure unparalleled freshness.
+          </p>
+
+          <!-- Flavor Notes Tags -->
+          <div class="flavor-badges" aria-label="Cupping flavor notes">
+            <span class="flavor-pill">✦ Toasted Hazelnut</span>
+            <span class="flavor-pill">✦ Dark Belgian Chocolate</span>
+            <span class="flavor-pill">✦ Wild Black Cherry</span>
+            <span class="flavor-pill">✦ Bourbon Vanilla</span>
+            <span class="flavor-pill">✦ Honeycomb</span>
+          </div>
+
+          <!-- Bottom Row: Scattered Coffee Beans Graphic & "Read more..." link -->
+          <div class="panel-footer-row">
+            <!-- Decorative scattered coffee beans SVG (Left) -->
+            <div class="scattered-beans-graphic" aria-hidden="true">
+              <svg width="90" height="36" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Bean 1 -->
+                <ellipse cx="20" cy="20" rx="10" ry="7" transform="rotate(-30 20 20)" fill="#c88a4b" />
+                <path d="M14 17 C18 20 22 20 26 23" stroke="#140b07" stroke-width="1.8" stroke-linecap="round" />
+                <!-- Bean 2 -->
+                <ellipse cx="48" cy="15" rx="8" ry="6" transform="rotate(40 48 15)" fill="#94572c" />
+                <path d="M44 13 C48 15 50 17 52 19" stroke="#140b07" stroke-width="1.5" stroke-linecap="round" />
+                <!-- Bean 3 -->
+                <ellipse cx="78" cy="24" rx="9" ry="6.5" transform="rotate(-15 78 24)" fill="#dfa264" />
+                <path d="M72 22 C76 24 80 24 84 26" stroke="#140b07" stroke-width="1.6" stroke-linecap="round" />
+                <!-- Bean 4 (smaller) -->
+                <ellipse cx="104" cy="18" rx="6" ry="4.5" transform="rotate(55 104 18)" fill="#713e1d" />
+                <path d="M102 16 C104 18 105 19 106 20" stroke="#140b07" stroke-width="1.2" stroke-linecap="round" />
+              </svg>
+              <span style="font-size: 0.85rem; font-style: italic; color: var(--text-cream-muted);">Signature Roast Archive</span>
+            </div>
+
+            <!-- "Read more..." link (Right) -->
+            <a href="#readMore" id="vintageReadMoreBtn" class="read-more-btn" role="button" aria-haspopup="dialog">
+              <span>Read more...</span>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DISCOVERY / FEATURED HIGHLIGHTS (Tasteful Cards Leading to Dedicated Pages)
+       ========================================================================== -->
+  <section class="classic-content-section" style="border-top: 3px solid #23120a; padding-top: 3.5rem;" aria-label="Explore the Roastery">
+    <div class="container">
+      <div class="section-title-wrap">
+        <p class="section-subtitle">Discover What We Do</p>
+        <h2 class="section-title">Explore Our Roastery &amp; Craft</h2>
+      </div>
+
+      <div class="products-grid" style="margin-bottom: 2rem;">
+        <!-- Card 1: About -->
+        <div class="product-card">
+          <div class="product-body" style="padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span style="font-size: 2.2rem; margin-bottom: 0.5rem;" aria-hidden="true">📜</span>
+            <span class="product-origin">Est. 2008 • Portland</span>
+            <h3 class="product-title" style="margin-top: 0.5rem;">Our Heritage &amp; Story</h3>
+            <p class="product-desc">Learn about our reclaimed 1954 Probat drum roaster and 100% ethical direct-trade farm partnerships.</p>
+            <a href="about.html" class="btn-primary" style="margin-top: auto; padding: 0.6rem 1.4rem;">
+              Read Our Story &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Shop & Menu -->
+        <div class="product-card">
+          <div class="product-body" style="padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span style="font-size: 2.2rem; margin-bottom: 0.5rem;" aria-hidden="true">☕</span>
+            <span class="product-origin">Espresso Bar &amp; Bakery</span>
+            <h3 class="product-title" style="margin-top: 0.5rem;">The Cafe &amp; Whole Beans</h3>
+            <p class="product-desc">Browse our daily counter drinks, morning Swedish pastries, and single-origin bagged roasts.</p>
+            <a href="shop.html" class="btn-primary" style="margin-top: auto; padding: 0.6rem 1.4rem;">
+              Explore Menu &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Gallery -->
+        <div class="product-card">
+          <div class="product-body" style="padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <span style="font-size: 2.2rem; margin-bottom: 0.5rem;" aria-hidden="true">🖼️</span>
+            <span class="product-origin">Atmosphere &amp; Moments</span>
+            <h3 class="product-title" style="margin-top: 0.5rem;">Visual Roastery Gallery</h3>
+            <p class="product-desc">Immerse yourself in photos of hand-poured latte art, cast iron roasting drums, and cozy seating.</p>
+            <a href="gallery.html" class="btn-primary" style="margin-top: auto; padding: 0.6rem 1.4rem;">
+              View Gallery &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (Multi-Page Navigation: Home, About, Gallery, Shop, Contact, FAQ, Terms)
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="terms.html">Copyright &amp; Terms</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        &copy; 2026 Coffee Shop Inc. All Rights Reserved. Crafted with dedication to sustainable agriculture and the art of traditional drum roasting.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       INTERACTIVE CART SLIDE-OVER DRAWER
+       ========================================================================== -->
+  <div id="cartDrawerBackdrop" class="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside id="cartDrawer" class="cart-drawer" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="cartDrawerHeading">
+    <div class="drawer-header">
+      <h2 id="cartDrawerHeading" class="drawer-title">Your Coffee Order</h2>
+      <button id="closeCartBtn" class="btn-close-drawer" aria-label="Close cart drawer">&times;</button>
+    </div>
+
+    <div id="cartItemsList" class="cart-items-list" role="region" aria-live="polite"></div>
+
+    <div class="drawer-footer">
+      <div class="subtotal-row">
+        <span>Order Subtotal:</span>
+        <span id="cartSubtotalAmount">$0.00</span>
+      </div>
+      <p style="font-size: 0.8rem; color: var(--text-cream-muted); margin-bottom: 1rem;">Free domestic shipping on orders over $45. Freshness guaranteed.</p>
+      <button id="checkoutBtn" class="btn-primary" style="width: 100%; justify-content: center; padding: 1rem;">
+        Proceed to Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       COOKIE CONSENT BANNER
+       ========================================================================== -->
+  <aside id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div style="font-size: 0.9rem; color: var(--text-cream); margin-bottom: 0.75rem;">
+      We use essential cookies to remember your coffee cart items and preferences for a seamless experience.
+    </div>
+    <div style="display: flex; gap: 0.75rem;">
+      <button id="acceptCookiesBtn" class="btn-primary" style="padding: 0.45rem 1.15rem; font-size: 0.82rem;">Accept</button>
+      <button id="declineCookiesBtn" class="btn-secondary" style="padding: 0.45rem 1.15rem; font-size: 0.82rem;">Decline</button>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
